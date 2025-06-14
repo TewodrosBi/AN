@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admas News - Your Horizon on Ethiopia</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 header">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2 border-b border-slate-200 text-sm text-slate-500">
+                <div id="current-date"></div>
+                <div class="flex items-center space-x-4">
+                    <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-slate-100">
+                        <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <a href="#" id="lang-eng" class="lang-link active">ENG</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="#" id="lang-amh" class="lang-link font-amharic">አማ</a>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-3xl font-bold text-slate-800 nav-link" data-page="home">Admas<span class="text-blue-600">News</span></a>
+                <nav class="hidden md:flex items-center space-x-6 text-base font-medium">
+                    <a href="#" class="nav-link active pb-1" data-page="home" data-lang-eng="Home" data-lang-amh="ዋና ገፅ">Home</a>
+                    <a href="#" class="nav-link hover:text-blue-600 transition-colors pb-1" data-page="politics" data-lang-eng="Politics" data-lang-amh="ፖለቲካ">Politics</a>
+                    <a href="#" class="nav-link hover:text-blue-600 transition-colors pb-1" data-page="business" data-lang-eng="Business" data-lang-amh="ንግድ">Business</a>
+                    <a href="#" class="nav-link hover:text-blue-600 transition-colors pb-1" data-page="education" data-lang-eng="Education" data-lang-amh="ትምህርት">Education</a>
+                </nav>
+                <div class="relative">
+                     <input type="text" id="search-input" placeholder="Search articles..." class="px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 w-32 md:w-48 transition-all duration-300 focus:w-48 md:focus:w-64">
+                </div>
+            </div>
+        </div>
+        
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <span class="font-bold mx-4" data-lang-eng="BREAKING:" data-lang-amh="ሰበር ዜና:">BREAKING:</span><span class="mx-8" data-lang-eng="Nationwide Health Workers' Strike Enters Third Week..." data-lang-amh="የጤና ባለሙያዎች አገር አቀፍ አድማ ሶስተኛ ሳምንቱን ይዟል...">Nationwide Health Workers' Strike Enters Third Week...</span>
+                <span class="font-bold mx-4" data-lang-eng="BREAKING:" data-lang-amh="ሰበር ዜና:">BREAKING:</span><span class="mx-8" data-lang-eng="UN Reports Funding Gap for Humanitarian Aid in Ethiopia..." data-lang-amh="ተመድ በኢትዮጵያ ለሰብአዊ እርዳታ የገንዘብ እጥረት እንዳጋጠመው አስታወቀ...">UN Reports Funding Gap...</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        </main>
+    
+    <footer id="footer" class="bg-slate-800 text-slate-300 mt-12">
+       </footer>
+
+    <div id="reader-view" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
